@@ -1,7 +1,9 @@
 # node-ts-final-project
 Proyecto final del curso Node JS con Typescript y API's Rest
 Para clonar el proyecto usando cli:
+
 1- Situarse en el directorio donde desee guardar el proyecto
+
 2- Luego ejecutar:
 ```
 git clone https://github.com/crisstianmella/node-ts-final-project
