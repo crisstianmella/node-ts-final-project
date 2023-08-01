@@ -21,10 +21,15 @@ yarn install
 ```
 yarn run build
 ```
-### 6- Ejecutar la aplicacion desde la carpeta de producion usando el comando 
+### 6- Antes de ejecutar la aplicacion de Node, debemos levantar primero nuestro Docker-compose usando
+```
+docker compose up -d
+```
+### 7- Ahora podemos ejecutar nuestra aplicacion de Node 
 ```
 yarn run prod
 ```
+
 # Docker Compose
 
 ### Instrucción para ejecutar un docker-compose.yaml
