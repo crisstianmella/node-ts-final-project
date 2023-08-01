@@ -17,15 +17,15 @@ cd node-ts-final-project
 ```
 yarn install
 ```
-### 5- Construir la aplicacion usando el comando 
+### 5- Construir la aplicación usando el comando 
 ```
 yarn run build
 ```
-### 6- Antes de ejecutar la aplicacion de Node, debemos levantar primero nuestro Docker-compose usando
+### 6- Antes de ejecutar la aplicación de Node, debemos levantar primero nuestro Docker-compose usando
 ```
 docker compose up -d
 ```
-### 7- Ahora podemos ejecutar nuestra aplicacion de Node 
+### 7- Ahora podemos ejecutar nuestra aplicación de Node 
 ```
 yarn run prod
 ```
@@ -38,7 +38,7 @@ yarn run prod
 docker compose up -d
 ```
 
-### Para eliminar el contenedor que se creo con docker compose
+### Para eliminar el contenedor que se creó con docker compose
 
 ```
 docker compose down
@@ -49,6 +49,16 @@ docker compose down
 ```
 docker compose ps
 ```
+
+# Postman collection Request
+Para facilitar la revisión se agregó también el archivo Postman collection para su importación
+
+```
+node-ts-project.postman_collection.json
+```
+
+
+
 
 
 
