@@ -7,10 +7,18 @@ Para clonar el proyecto usando cli:
 git clone https://github.com/crisstianmella/node-ts-final-project
 ```
 3- Entrar al directorio del proyecto: 
-```cd node-ts-final-project```
+```
+cd node-ts-final-project
+```
 4- Instalar dependencias usando:  
-```yarn install```
+```
+yarn install
+```
 5- Construir la aplicacion usando el comando 
-```yarn run build```
+```
+yarn run build
+```
 6- Ejecutar la aplicacion desde la carpeta de producion usando el comando 
-```yarn run prod```
+```
+yarn run prod
+```
