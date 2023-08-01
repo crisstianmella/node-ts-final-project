@@ -1,5 +1,6 @@
 # node-ts-final-project
 Proyecto final del curso Node JS con Typescript y API's Rest
+
 Para clonar el proyecto usando cli:
 
 1- Situarse en el directorio donde desee guardar el proyecto
@@ -24,3 +25,26 @@ yarn run build
 ```
 yarn run prod
 ```
+# Docker Compose
+
+### Instrucción para ejecutar un docker-compose.yaml
+
+```
+docker compose up -d
+```
+
+### Para eliminar el contenedor que se creo con docker compose
+
+```
+docker compose down
+```
+
+### Para ver el estado de los contenedores creados con docker compose
+
+```
+docker compose ps
+```
+
+
+
+
