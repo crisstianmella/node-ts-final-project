@@ -14,9 +14,9 @@ export class AppService {
          // TODO: Cambiar al ejecutar el script 'yarn run build' y luego 'yarn run prod'
          entities: [process.env.DB_ENTITIES || 'dist/**/*.entity.js'],
          username: process.env.DB_USER || 'adminUser',
-         password: process.env.DB_PASS || '12345',
-         database: process.env.DB_NAME || 'bddcursonode',
-         synchronize: process.env.DB_SYNC === 'true' ? true : false,
+         password: process.env.DB_PASS || 'proyectofinal12345',
+         database: process.env.DB_NAME || 'db_store',
+         synchronize: process.env.DB_SYNC === 'true' ? true : true,
          logging: process.env.DB_LOGG === 'true' ? true : false,
       }
    }

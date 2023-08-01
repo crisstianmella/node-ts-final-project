@@ -14,10 +14,10 @@ services:
       networks:
          - net-mysql-server
       volumes:
-         - data-mysql-volume:/var/lib/mysql
+         - data-mysql-volume7298374289:/var/lib/mysql
 
 networks:
    net-mysql-server:
 
 volumes:
-   data-mysql-volume:
+   data-mysql-volume7298374289:
