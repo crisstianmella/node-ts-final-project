@@ -1,0 +1,7 @@
+export enum StatusPurchare {
+   IN_CART = 'IN_CART',
+   PENDING_PAYMENT = 'PENDING_PAYMENT',
+   PENDDING_APPROVED = 'PENDING_APPROVED',
+   APPROVED = 'APPROVED',
+   ERROR = 'ERROR',
+}
