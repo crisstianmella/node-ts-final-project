@@ -1,0 +1,374 @@
+{
+	"info": {
+		"_postman_id": "4b406864-f61e-4e1a-87eb-78e82a729306",
+		"name": "node-ts-project",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "users",
+			"item": [
+				{
+					"name": "INSERT",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name\": \"Hector\",\r\n    \"lastname\": \"Opazo\",\r\n    \"email\": \"h.opazo@gmail.com\",\r\n    \"password\": \"5234423456\",\r\n    \"city\": \"Chillan\",\r\n    \"province\": \"Chillan\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{PATH}}/user/insert",
+							"host": [
+								"{{PATH}}"
+							],
+							"path": [
+								"user",
+								"insert"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "LISTALL",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{PATH}}/user/list",
+							"host": [
+								"{{PATH}}"
+							],
+							"path": [
+								"user",
+								"list"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "DELETE",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "{{PATH}}/user/delete/495d7c5d-aaf5-4d68-8656-b5a213e63a84",
+							"host": [
+								"{{PATH}}"
+							],
+							"path": [
+								"user",
+								"delete",
+								"495d7c5d-aaf5-4d68-8656-b5a213e63a84"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "UPDATE",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name\": \"Humberto\",\r\n    \"lastname\": \"Opazo\",\r\n    \"email\": \"h.opazo@gmail.com\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{PATH}}/user/update/495d7c5d-aaf5-4d68-8656-b5a213e63a84",
+							"host": [
+								"{{PATH}}"
+							],
+							"path": [
+								"user",
+								"update",
+								"495d7c5d-aaf5-4d68-8656-b5a213e63a84"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "LIST-ONE",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{PATH}}/user/listOne/495d7c5d-aaf5-4d68-8656-b5a213e63a84",
+							"host": [
+								"{{PATH}}"
+							],
+							"path": [
+								"user",
+								"listOne",
+								"495d7c5d-aaf5-4d68-8656-b5a213e63a84"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "customers",
+			"item": [
+				{
+					"name": "POST",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"address\": \"Av. Manuel Montt, Paradero 15, Pasaje las amelias, casa 321\",\r\n    \"dni\": \"12345678-9\",\r\n    \"userId\": \"81734ef4-94dc-441a-92af-a708637238f6\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{PATH}}/customer/insert",
+							"host": [
+								"{{PATH}}"
+							],
+							"path": [
+								"customer",
+								"insert"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "LISTALL",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{PATH}}/customer/list",
+							"host": [
+								"{{PATH}}"
+							],
+							"path": [
+								"customer",
+								"list"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "LIST-ONE",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{PATH}}/customer/listOne/ffebed7e-5986-4c5a-b136-8886049ebc8f",
+							"host": [
+								"{{PATH}}"
+							],
+							"path": [
+								"customer",
+								"listOne",
+								"ffebed7e-5986-4c5a-b136-8886049ebc8f"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "UPDATE",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"dni\": \"12345678-90\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{PATH}}/customer/update/ffebed7e-5986-4c5a-b136-8886049ebc8f",
+							"host": [
+								"{{PATH}}"
+							],
+							"path": [
+								"customer",
+								"update",
+								"ffebed7e-5986-4c5a-b136-8886049ebc8f"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "DELETE",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "{{PATH}}/customer/delete/a30dafe6-f545-4ea8-957e-8a85d127b078",
+							"host": [
+								"{{PATH}}"
+							],
+							"path": [
+								"customer",
+								"delete",
+								"a30dafe6-f545-4ea8-957e-8a85d127b078"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "purchase",
+			"item": [
+				{
+					"name": "INSERT",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"customerId\": \"3c8783dc-5572-484d-8e34-6712f83b829a\",\r\n    \"paymentMethod\": \"Credit Card\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{PATH}}/purchase/insert",
+							"host": [
+								"{{PATH}}"
+							],
+							"path": [
+								"purchase",
+								"insert"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "LISTALL",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{PATH}}/purchase/list",
+							"host": [
+								"{{PATH}}"
+							],
+							"path": [
+								"purchase",
+								"list"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "LISTONE",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{PATH}}/purchase/listOne/asdasdasdasda",
+							"host": [
+								"{{PATH}}"
+							],
+							"path": [
+								"purchase",
+								"listOne",
+								"asdasdasdasda"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "UPDATE",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"status\": \"APPROVED\",\r\n    \"active\": true\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{PATH}}/purchase/update/92bb44df-e43c-424a-8188-e3bfce3e7483",
+							"host": [
+								"{{PATH}}"
+							],
+							"path": [
+								"purchase",
+								"update",
+								"92bb44df-e43c-424a-8188-e3bfce3e7483"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "New Request",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "{{PATH}}/purchase/delete/92bb44df-e43c-424a-8188-e3bfce3e7483",
+							"host": [
+								"{{PATH}}"
+							],
+							"path": [
+								"purchase",
+								"delete",
+								"92bb44df-e43c-424a-8188-e3bfce3e7483"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "HEALTHCHECK",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{PATH}}/",
+					"host": [
+						"{{PATH}}"
+					],
+					"path": [
+						""
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
