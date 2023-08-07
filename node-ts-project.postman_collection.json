@@ -333,7 +333,7 @@
 					"response": []
 				},
 				{
-					"name": "New Request",
+					"name": "DELETE",
 					"request": {
 						"method": "DELETE",
 						"header": [],
