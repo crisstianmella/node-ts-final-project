@@ -11,13 +11,13 @@ class CustomerMiddleware {
 
       if (errors.length > 0) {
          console.log(errors)
-         return next(new Error('Invalid request'))
+         return next(new Error('Guid listOne validation failed'))
       }
 
       next()
    }
 }
 
-export const MiddlewareListOne: ((req: Request, res: Response, next: NextFunction) => Promise<void>)[] = [
+export const CustomerMiddlewareListOne: ((req: Request, res: Response, next: NextFunction) => Promise<void>)[] = [
    CustomerMiddleware.ValidateListOne,
 ]

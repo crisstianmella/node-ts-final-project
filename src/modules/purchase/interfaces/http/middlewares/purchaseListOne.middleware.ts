@@ -1,6 +1,6 @@
 import { validate } from 'class-validator'
 import { Request, Response, NextFunction } from 'express'
-import { PurchaseListOneValidator } from '../validators/purchaseListOne'
+import { PurchaseListOneValidator } from '../validators/purchaseListOne.validator'
 
 class PurchaseMiddleware {
    static async ValidateListOne(req: Request, _res: Response, next: NextFunction) {
@@ -11,13 +11,13 @@ class PurchaseMiddleware {
 
       if (errors.length > 0) {
          console.log(errors)
-         return next(new Error('Invalid request'))
+         return next(new Error('Guid listOne validation failed'))
       }
 
       next()
    }
 }
 
-export const MiddlewareListOne: ((req: Request, res: Response, next: NextFunction) => Promise<void>)[] = [
+export const PurchaseMiddlewareListOne: ((req: Request, res: Response, next: NextFunction) => Promise<void>)[] = [
    PurchaseMiddleware.ValidateListOne,
 ]

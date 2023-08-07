@@ -3,7 +3,9 @@ import UserApplication from '../../application/user.application'
 import { UserRepository } from '../../domain/user.repository'
 import UserInfraestructure from '../../infraestructure/user.infraestructure'
 import UserController from './user.controller'
-import { MiddlewareListOne } from './middlewares/user.middleware'
+import { UserMiddlewareListOne } from './middlewares/userListOne.middleware'
+import { UserMiddlewareUpdate } from './middlewares/userUpdate.middleware'
+import { UserMiddlewareDelete } from './middlewares/userDelete.middleware'
 
 const infraestructure: UserRepository = new UserInfraestructure()
 const application = new UserApplication(infraestructure)
@@ -23,9 +25,9 @@ class UserRouter {
    mountRoutes() {
       this.expressRouter.post('/insert', controller.insert)
       this.expressRouter.get('/list', controller.list)
-      this.expressRouter.get('/listOne/:guid', ...MiddlewareListOne, controller.listOne)
-      this.expressRouter.put('/update/:guid', controller.update)
-      this.expressRouter.delete('/delete/:guid', controller.delete)
+      this.expressRouter.get('/listOne/:guid', ...UserMiddlewareListOne, controller.listOne)
+      this.expressRouter.put('/update/:guid', ...UserMiddlewareUpdate, controller.update)
+      this.expressRouter.delete('/delete/:guid', ...UserMiddlewareDelete, controller.delete)
    }
 }
 
