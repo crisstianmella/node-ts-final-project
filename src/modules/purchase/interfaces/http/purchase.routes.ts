@@ -6,6 +6,7 @@ import PurchaseController from './purchase.controller'
 import { PurchaseMiddlewareListOne } from './middlewares/purchaseListOne.middleware'
 import { PurchaseMiddlewareUpdate } from './middlewares/purchaseUpdate.middleware'
 import { PurchaseMiddlewareDelete } from './middlewares/purchaseDelete.middleware'
+import { PurchaseMiddlewareUpdateStatus } from './middlewares/purchaseUpdateStatus.middleware'
 
 const infraestructure: PurchaseRepository = new PurchaseInfraestructure()
 const application = new PurchaseApplication(infraestructure)
@@ -26,7 +27,12 @@ class PurchaseRouter {
       this.expressRouter.post('/insert', controller.insert)
       this.expressRouter.get('/list', controller.list)
       this.expressRouter.get('/listOne/:guid', ...PurchaseMiddlewareListOne, controller.listOne)
-      this.expressRouter.put('/update/:guid', ...PurchaseMiddlewareUpdate, controller.update)
+      this.expressRouter.put(
+         '/update/:guid',
+         ...PurchaseMiddlewareUpdate,
+         ...PurchaseMiddlewareUpdateStatus,
+         controller.update,
+      )
       this.expressRouter.delete('/delete/:guid', ...PurchaseMiddlewareDelete, controller.delete)
    }
 }
